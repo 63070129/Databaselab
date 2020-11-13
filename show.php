@@ -5,14 +5,14 @@
 <body>
 <?php
 $conn = mysqli_init();
-mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc', '123456789', 'itflab', 3306);
+mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '123456789', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600" border="1">
+<table width="600" border="1" color="black">
   <tr>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
