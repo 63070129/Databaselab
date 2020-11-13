@@ -3,19 +3,6 @@
 <title>ITF Lab</title>
 </head>
 <body>
-<div class="container">
-  <h2>Black/Dark Table</h2>
-  <p>The .table-dark class adds a black background to the table:</p>            
-  <table class="table table-dark">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
@@ -26,6 +13,7 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <table width="600" border="1">
+  <table class="table table-dark">
   <tr>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
