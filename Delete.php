@@ -1,25 +1,26 @@
-<meta charset="UTF-8">
 <?php
-//1. เชื่อมต่อ database: 
-include('show.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
-//สร้างตัวแปรสำหรับรับค่า member_id จากไฟล์แสดงข้อมูล
-$type_id = $_REQUEST["ID"];
- 
-//ลบข้อมูลออกจาก database ตาม member_id ที่ส่งมา
- 
-$sql = "DELETE FROM tbl_type WHERE type_id='$type_id' ";
-$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
- 
-//จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
-  
-  if($result){
-  echo "<script type='text/javascript'>";
-  echo "window.location = 'type.php'; ";
-  echo "</script>";
-  }
-  else{
-  echo "<script type='text/javascript'>";
-  echo "alert('Error back to delete again');";
-  echo "</script>";
+
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
+if (mysqli_connect_errno($conn))
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
+
+
+$name = $_POST['name'];
+$comment = $_POST['comment'];
+$link = $_POST['link'];
+
+
+$sql = "DELETE INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
+
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+  
+mysqli_close($conn);
 ?>
