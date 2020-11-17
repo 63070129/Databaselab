@@ -3,10 +3,10 @@
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
 
-$name = $_POST['name'];
-$comment = $_POST['comment'];
-$id = $_GET['id'];
-$del = "DELETE FROM guestbook where id='$id'";
+$name = $_POST['Name'];
+$comment = $_POST['Comment'];
+$id = $_GET['ID'];
+$del = "DELETE FROM Guestbook where ID='$id'";
 
 if($del)
 {
