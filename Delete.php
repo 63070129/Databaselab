@@ -6,7 +6,7 @@ mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labp
 $name = $_POST['Name'];
 $comment = $_POST['Comment'];
 $id = $_GET['ID'];
-$del = "DELETE FROM Guestbook where ID='$id'";
+$del = "DELETE FROM Guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
 
 if($del)
 {
