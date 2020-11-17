@@ -5,16 +5,17 @@ mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labp
 
 $name = $_POST['name'];
 $comment = $_POST['comment'];
-$link = $_POST['link'];
+$id = $_GET['id'];
+$del = "DELETE FROM guestbook where id='$id'";
 
-$sql = "DELETE FROM guestbook where id='$id'";
-
-
-if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-  } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
-  
-mysqli_close($conn);
+if($del)
+{
+    mysqli_close($db);
+    header("location:all_records.php");
+    exit;	
+}
+else
+{
+    echo "Error deleting record";
+}
 ?>
