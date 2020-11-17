@@ -30,16 +30,9 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <div class="row">
-    <div class="col-4">
     <td><?php echo $Result['Name'];?></div></td>
-    </div>
-    <div class="col-4">
     <td><?php echo $Result['Comment'];?></td>
-    </div>
-    <div class="col-4">
-    </div>
-    </div>
+    <td>><a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a><a href="delete.php?id=<?php echo $data['id']; ?>">Delete</a></td>
   </tr>
 <?php
 }
