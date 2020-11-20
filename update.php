@@ -8,12 +8,12 @@ if (mysqli_connect_errno($conn))
 }
 
 $id = $_GET['ID']
-$name = $_POST['name'];
-$comment = $_POST['comment'];
+$name = $_GET['name'];
+$comment = $_GET['comment'];
 $sql = "UPDATE guestbook SET  
 			Name ='$name' ,
 			Comment ='$comment' ,
-            WHERE id='$id' ";
+            		WHERE id='$id' ";
 if (mysqli_query($conn, $sql)) {
     echo "Update record successfully";
   } else {
