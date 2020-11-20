@@ -1,9 +1,7 @@
 <?php
 	mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
-
 	$id = $_GET['ID'];
-
-	$sql = 'SELECT * FROM guestbook WHERE ID = '.$id.'';
+	$sql = 'SELECT * FROM guestbooks WHERE ID = '.$id.'';
 	$query = mysqli_query($conn, $sql);
 	if(!$query) {
 		header('Location: show.php');
@@ -43,9 +41,13 @@
 								<label>Comment</label>
 								<textarea name="comment" class="form-control" rows="5" required><?php echo $data['Comment']; ?></textarea>
 							</div>
+							<div class="form-group">
+								<label>Link</label>
+								<input type="text" name="link" value="<?php echo $data['Link']; ?>" class="form-control">
+							</div>
 							<div class="text-center">
-								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">บันทึก</button>
-								<a class="btn btn-sm btn-dark my-3" href="show.php">ยกเลิก</a>
+								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">SAVE</button>
+								<a class="btn btn-sm btn-dark my-3" href="show.php">CANCLE</a>
 							</div>
 						</form>
 					</div>
