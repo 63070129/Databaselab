@@ -32,7 +32,7 @@ else {
 						<div class="row">
 							<div class="col-6"><h1 class="text-monospace">Edit</h1></div>
 						</div>
-						<form action = "update.php?update_id=<?php echo $Result['ID']; ?>" method = "post" id="CommentForm" class="form-horizontal mt-5" >
+						<form action = "update.php?ID=<?php echo $Result['ID']; ?>" method = "post" id="CommentForm" class="form-horizontal mt-5" >
 							<input type="text" name="id" value="<?php echo $data['ID']; ?>" class="form-control d-none" required>
 							<div class="form-group">
 								<label>Name</label>
