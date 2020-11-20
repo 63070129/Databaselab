@@ -15,13 +15,7 @@ $sql = "SELECT * FROM guestbook WHERE id='$id' ";
     <form action = "update.php" method = "get" id="CommentForm" >
     <input type="text" name="name" value="<?php echo $Result['name'];?>">
     <textarea rows="10" cols="20" name ="comment" value="<?php echo $Result['name'];?>">
-<?php
-if (mysqli_query($conn, $sql)) {
-    echo "Update record successfully";
-  } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
-
+    <input type="submit" id="commentBtn">
 mysqli_close($conn);
 
 ?>
