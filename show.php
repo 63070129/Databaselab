@@ -26,7 +26,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo '<a href="delete.php?id='.$Result['ID'].'">ลบ</a>'?>
-        <?php echo '<a href="insert_new.php?id='.$Result['ID'].'">แก้ไข</a>'?></td>
+        <?php echo '<a href="insert_new.php">แก้ไข</a>'?></td>
   </tr>
 <?php
 }
