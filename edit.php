@@ -44,8 +44,8 @@
 								<textarea name="comment" class="form-control" rows="5" required><?php echo $data['Comment']; ?></textarea>
 							</div>
 							<div class="text-center">
-								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">SAVE</button>
-								<a class="btn btn-sm btn-dark my-3" href="show.php">CANCLE</a>
+								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">บันทึก</button>
+								<a class="btn btn-sm btn-dark my-3" href="show.php">ยกเลิก</a>
 							</div>
 						</form>
 					</div>
