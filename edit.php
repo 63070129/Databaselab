@@ -48,7 +48,7 @@ else {
 							</div>
 							<div class="text-center">
 								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">Save</button>
-								<a class="btn btn-sm btn-dark my-3" href="show.php">Cancel</a>
+								<a class="btn btn-sm btn-danger my-3 font-weight-bold" href="show.php">Cancel</a>
 							</div>
 						</form>
 					</div>
