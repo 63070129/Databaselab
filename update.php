@@ -1,5 +1,5 @@
 <?php
-	$conn = mysqli_connect('serveritf.mysql.database.azure.com', 'jiraphat@serveritf', 'Jira2545', 'ITFLab');
+	mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
 
 	$name = $_POST['name'];
 	$comment = $_POST['comment'];
