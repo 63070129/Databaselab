@@ -1,11 +1,17 @@
-<?php	
-	$conn = mysqli_init();
-	mysqli_connect_real_connect($con, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
-	$name = $_POST['name'];
-	$comment = $_POST['comment'];
-	$link = $_POST['link'];
-	$id = $_POST['ID'];
-	$sql = 'UPDATE guestbook SET Name = "'.$name.'", Comment = "'.$comment.'", Link = "'.$link.'" WHERE ID = '.$id.'';
+<?php
+
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'chanapon63070028.mysql.database.azure.com', 'chanapon@chanapon63070028', 'Kong1312', 'itflab', 3306);
+if (mysqli_connect_errno($conn))
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+$id = $_GET['update_id'];
+$name = $_POST['name'];
+$comment = $_POST['comment'];
+$link = $_POST['link'];
+$sql = "UPDATE guestbook SET Name = '$name', Comment = '$comment', Link = '$link' WHERE ID = $id";
+
 ?>
 <!DOCTYPE html>
 <html>
