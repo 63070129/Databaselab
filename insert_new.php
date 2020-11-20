@@ -35,7 +35,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     Name:<br>
     <input type="text" name = "name" id="idName" value=<?php echo " $Result['Name'];"?>><br>
     Comment:<br>
-    <textarea rows="10" cols="20" name = "comment" id="idComment"value="<?php echo  $Result['comment'];?></textarea><br>  
+    <textarea rows="10" cols="20" name = "comment" id="idComment"value=<?php echo " $Result['comment'];"?>></textarea><br>  
     <input type="submit" id="commentBtn">
   </form>
 </body>
