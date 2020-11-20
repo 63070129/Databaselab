@@ -9,16 +9,12 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$id = $_GET['ID']
-$sql = "SELECT * FROM guestbook WHERE id='$id' ";
-$name = $_GET['name'];
-$comment = $_GET['comment'];
 ?>
     <form action = "update.php" method = "get" id="CommentForm" >
     Name:<br>
     <input type="text" name="name" value="<?php echo $Result['name'];?>"><br>
     Comment:<br>
-    <textarea rows="10" cols="20" name ="comment" value="<?php echo $Result['name'];?>"></textarea><br>
+    <textarea rows="10" cols="20" name ="comment" value="<?php echo $Result['commen'];?>"></textarea><br>
     <input type="submit" id="commentBtn"><br>
 <?php
 mysqli_close($conn);
