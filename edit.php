@@ -39,15 +39,15 @@
 							</div>
 							<div class="form-group">
 								<label>Comment</label>
-								<textarea name="comment" class="form-control" rows="5" required><?php echo $data['Comment']; ?></textarea>
+								<textarea name="comment" value="<?php echo $data['Comment']; ?>" class="form-control" rows="5" required></textarea>
 							</div>
 							<div class="form-group">
 								<label>Link</label>
 								<input type="text" name="link" value="<?php echo $data['Link']; ?>" class="form-control">
 							</div>
 							<div class="text-center">
-								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">บันทึก</button>
-								<a class="btn btn-sm btn-dark my-3" href="show.php">ยกเลิก</a>
+								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">Save</button>
+								<a class="btn btn-sm btn-dark my-3" href="show.php">Cancel</a>
 							</div>
 						</form>
 					</div>
