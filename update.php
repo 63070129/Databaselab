@@ -1,12 +1,10 @@
 <?php
 	mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
-
 	$name = $_POST['name'];
 	$comment = $_POST['comment'];
 	$link = $_POST['link'];
 	$id = $_POST['id'];
-
-	$sql = 'UPDATE guestbooks SET Name = "'.$name.'", Comment = "'.$comment.'" WHERE ID = '.$id.'';
+	$sql = 'UPDATE guestbooks SET Name = "'.$name.'", Comment = "'.$comment.'", Link = "'.$link.'" WHERE ID = '.$id.'';
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +34,7 @@
 							}
 						?>
 						</h2>
-						<p align="center" class="mt-4 mb-0"><a href="index.php" class="btn btn-sm btn-success">BACK</a></p>
+						<p align="center" class="mt-4 mb-0"><a href="show.php" class="btn btn-sm btn-success">BACK</a></p>
 					</div>
 				</div>
 			</div>
