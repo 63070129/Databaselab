@@ -17,6 +17,7 @@ if (mysqli_query($conn, $sql)) {
   
 mysqli_close($conn);
 ?>
+<?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
