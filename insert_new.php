@@ -9,8 +9,10 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$id = mysqli_real_escape_string($con,$_GET['ID']);
 $sql = "SELECT * FROM guestbook WHERE id='$id' ";
+$id = $_GET['ID']
+$name = $_GET['name'];
+$comment = $_GET['comment'];
 ?>
     <form action = "update.php" method = "get" id="CommentForm" >
     Name:<br>
