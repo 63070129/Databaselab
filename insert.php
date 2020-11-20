@@ -8,7 +8,7 @@ if(mysqli_connect_errno($conn)) {
 	$name = $_POST['name'];
 	$comment = $_POST['comment'];
 	$link = $_POST['link'];
-	$sql = "INSERT INTO guestbooks (Name, Comment, Link) VALUES ('$name', '$comment', '$link')";
+	$sql = "INSERT INTO guestbook (Name, Comment, Link) VALUES ('$name', '$comment', '$link')";
 ?>
 <!DOCTYPE html>
 <html>
