@@ -3,7 +3,7 @@
 	<title>Editor</title>
 </head>
 <body>
-    <form action =<?php echo " update.php?id='.$Result['ID'].'"?> method = "post" id="CommentForm" >
+    <form action ="update.php" method = "post" id="CommentForm" >
     Name:<br>
     <input type="text" name = "name" value=<?php echo " $Result['Name'];"?> id="idName" placeholder="Enter Name"><br>
     Comment:<br>
