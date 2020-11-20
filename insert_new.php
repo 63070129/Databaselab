@@ -16,6 +16,7 @@ $sql = "SELECT * FROM guestbook WHERE id='$id' ";
     <input type="text" name="name" value="<?php echo $Result['name'];?>">
     <textarea rows="10" cols="20" name ="comment" value="<?php echo $Result['name'];?>">
     <input type="submit" id="commentBtn">
+<?php
 mysqli_close($conn);
 
 ?>
