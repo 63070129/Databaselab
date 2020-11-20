@@ -13,10 +13,11 @@ $id = mysqli_real_escape_string($con,$_GET['ID']);
 $sql = "SELECT * FROM guestbook WHERE id='$id' ";
 ?>
     <form action = "update.php" method = "get" id="CommentForm" >
-    <input type="text" name="name" value="<?php echo $Result['name'];?>">
-    <textarea rows="10" cols="20" name ="comment" value="<?php echo $Result['name'];?>">
-    <input type="submit" id="commentBtn">
+    Name:<br>
+    <input type="text" name="name" value="<?php echo $Result['name'];?>"><br> 
+    Comment:<br>
+    <textarea rows="10" cols="20" name ="comment" value="<?php echo $Result['name'];?>"><br> 
+    <input type="submit" id="commentBtn"><br> 
 <?php
 mysqli_close($conn);
-
 ?>
