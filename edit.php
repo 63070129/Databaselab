@@ -1,7 +1,7 @@
 <?php
 	mysqli_real_connect($conn, 'labpc129.mysql.database.azure.com', 'it63070129@labpc129', '029154897zZ', 'itflab', 3306);
 	$id = $_GET['ID'];
-	$sql = 'SELECT * FROM guestbooks WHERE ID = '.$id.'';
+	$sql = 'SELECT * FROM guestbook WHERE ID = '.$id.'';
 	$query = mysqli_query($conn, $sql);
 	if(!$query) {
 		header('Location: show.php');
