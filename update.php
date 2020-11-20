@@ -6,7 +6,7 @@
 	$link = $_POST['link'];
 	$id = $_POST['id'];
 
-	$sql = 'UPDATE guestbooks SET Name = "'.$name.'", Comment = "'.$comment.'", Link = "'.$link.'" WHERE ID = '.$id.'';
+	$sql = 'UPDATE guestbooks SET Name = "'.$name.'", Comment = "'.$comment.'" WHERE ID = '.$id.'';
 ?>
 <!DOCTYPE html>
 <html>
