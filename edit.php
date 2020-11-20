@@ -43,10 +43,6 @@
 								<label>Comment</label>
 								<textarea name="comment" class="form-control" rows="5" required><?php echo $data['Comment']; ?></textarea>
 							</div>
-							<div class="form-group">
-								<label>Link</label>
-								<input type="text" name="link" value="<?php echo $data['Link']; ?>" class="form-control">
-							</div>
 							<div class="text-center">
 								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">SAVE</button>
 								<a class="btn btn-sm btn-dark my-3" href="show.php">CANCLE</a>
