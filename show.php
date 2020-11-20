@@ -33,9 +33,9 @@
 							<table class="table thead-inverse">
 								<thead>
 									<tr>
-										<th width="150px">Action</th>
 										<th>Name</th>
 										<th>Comment</th>
+										<th width="150px">Action</th>	  
 										<th>Link</th>
 									</tr>
 								</thead>
