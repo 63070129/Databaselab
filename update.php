@@ -7,12 +7,8 @@ if (mysqli_connect_errno($conn))
 }
 
 $id = $Result['ID']
-$name = $Result['Name']
-$comment = $Result['comment'];
-$sql = "UPDATE guestbook SET  
-            Name ='$name' ,
-            Comment ='$comment' ,
-            WHERE id='$id' ";
+echo $id;
+$sql = "SELECT * FROME guestbook WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
     echo "Update record successfully";
   } else {
