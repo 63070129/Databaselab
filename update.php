@@ -3,7 +3,7 @@
 	$name = $_POST['name'];
 	$comment = $_POST['comment'];
 	$link = $_POST['link'];
-	$id = $_POST['id'];
+	$id = $_POST['ID'];
 	$sql = 'UPDATE guestbook SET Name = "'.$name.'", Comment = "'.$comment.'", Link = "'.$link.'" WHERE ID = '.$id.'';
 ?>
 <!DOCTYPE html>
