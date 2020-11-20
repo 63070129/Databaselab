@@ -47,7 +47,7 @@ else {
 								<input type="text" name="link" value="<?php echo $data['Link']; ?>" class="form-control">
 							</div>
 							<div class="text-center">
-								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">Save</button>
+								<button type="submit" class="btn btn-sm btn-success my-3 font-weight-bold">Update</button>
 								<a class="btn btn-sm btn-danger my-3 font-weight-bold" href="show.php">Cancel</a>
 							</div>
 						</form>
