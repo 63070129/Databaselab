@@ -40,7 +40,7 @@ else {
 							</div>
 							<div class="form-group">
 								<label>Comment</label>
-								<textarea name="comment" value="<?php echo $data['Comment']; ?>" class="form-control" rows="5" required></textarea>
+								<textarea name="comment" class="form-control" rows="5" required><?php echo $data['Comment']; ?></textarea>
 							</div>
 							<div class="form-group">
 								<label>Link</label>
